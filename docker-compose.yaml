@@ -1,0 +1,16 @@
+version: '3'
+services:
+   ping:
+      container_name: 'ping_exporter'
+      image: czerwonk/ping_exporter
+      volumes:
+         - ./config:/config
+      ports:
+         - 9427:9427
+      networks:
+         - prometheus-ping-exporter-network
+
+networks:
+   prometheus-ping-exporter-network:
+      name: prometheus-ping-exporter-network
+      driver: bridge

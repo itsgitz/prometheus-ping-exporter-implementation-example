@@ -1,0 +1,16 @@
+targets:
+  - 8.8.8.8
+  - 8.8.4.4
+  - itsgitz.com
+
+dns:
+  refresh: 2m15s
+
+ping:
+  interval: 2s
+  timeout: 3s
+  history-size: 42
+  payload-size: 120
+
+options:
+  disableIPv6: false
